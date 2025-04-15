@@ -16,7 +16,7 @@ The rest of this readme is from the original readme minus modifications to the `
 
 Docker container for [Roon], based on Photon OS linux
 Based on the great work of [steefdebruijn] who did the same based on a debian-slim image. 
-All informations to troubleshoot your linux server can be found [here]
+All informations to troubleshoot your linux server can be found [here] 
 
 ## Differences
 - ffmpeg is installed manually from official sources
