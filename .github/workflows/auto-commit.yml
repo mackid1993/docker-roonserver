@@ -3,25 +3,28 @@ name: Auto Commit Ping
 
 on:
   schedule:
-    - cron: '0 0 * * 1'  # Runs every Monday at 00:00 UTC
-  workflow_dispatch:     # Manual trigger
+    - cron: '0 0 * * 1'  # Every Monday at 00:00 UTC
+  workflow_dispatch:     # Optional manual run
 
 jobs:
   auto-commit:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Update timestamp
         run: |
           echo "Last ping: $(date -u)" > .auto-commit.txt
 
-      - name: Commit and push
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
           git add .auto-commit.txt
           git commit -m "chore: auto-update timestamp" || echo "No changes to commit"
           git push
