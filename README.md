@@ -1,5 +1,7 @@
 # Auto Updating Photon OS Roon Server Docker
 
+## I apologize for not being a true fork. I needed to make a clean repo so scheduling would work.
+
 *Thank you to [David Ferreira](https://github.com/davindisko) for their wonderful container.*
 
 **The primary difference with my container is an automated Github action that will rebuild it on the 1st of the Month at Midnight EST/1 AM EDT to ensure all dependencies are always up to date.**
