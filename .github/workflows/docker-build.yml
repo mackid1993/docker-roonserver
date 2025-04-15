@@ -46,7 +46,7 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_CLEANUP_TOKEN }}
           REPO_NAME: mackid1993/docker-roonserver
-          KEEP_COUNT: 5
+          KEEP_COUNT: 3
         run: |
           apt update && apt install -y jq curl
 
