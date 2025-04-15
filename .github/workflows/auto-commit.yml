@@ -3,7 +3,7 @@ name: Auto Commit Ping
 
 on:
   schedule:
-    - cron: '0 0 * * 1'  # Every Monday at 00:00 UTC
+    - cron: '0 5 1 * *'  # Every Monday at 00:00 UTC
   workflow_dispatch:     # Optional manual run
 
 jobs:
