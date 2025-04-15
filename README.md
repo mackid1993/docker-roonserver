@@ -10,7 +10,7 @@
 
 This also would not be possible without the work of [Steef de Bruijn](https://github.com/steefdebruijn).
 
-The rest of this readme is from the original readme minus modifications to the `docker run` commmand.
+The rest of this readme is from the original readme minus modifications to the `docker run` commmand
  
 # Docker for Roon using Photon OS
 
