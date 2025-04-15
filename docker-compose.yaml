@@ -1,0 +1,15 @@
+services:
+  roonserver:
+    image: davindisko/roon-photon:latest
+    container_name: roonserver
+    hostname: roonserver
+    network_mode: host
+    # privileged: true
+    environment:
+      TZ: "Europe/Paris"
+    volumes:
+      - ./app:/app
+      - ./data:/data
+      - ./music:/music
+      - ./backups:/backup
+    restart: always
