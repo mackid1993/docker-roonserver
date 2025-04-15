@@ -2,7 +2,7 @@ name: Scheduled Docker Build and Push
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '0 5 1 * *'
   workflow_dispatch:
 
 jobs:
