@@ -15,7 +15,7 @@ The rest of this readme is from the original readme minus modifications to the `
 # Docker for Roon using Photon OS
 
 Docker container for [Roon], based on Photon OS linux
-Based on the great work of [steefdebruijn] who did the same based on a debian-slim image.
+Based on the great work of [steefdebruijn] who did the same based on a debian-slim image. 
 All informations to troubleshoot your linux server can be found [here]
 
 ## Differences
