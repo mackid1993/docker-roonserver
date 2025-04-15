@@ -24,4 +24,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: mackid1993/docker-roonserver:latest
+          tags: mackid1993/docker-roonserver:latest 
