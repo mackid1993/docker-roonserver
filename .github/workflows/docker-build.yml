@@ -48,20 +48,23 @@ jobs:
           KEEP_COUNT: 3
         run: |
           TOKEN=$(curl -s -H "Content-Type: application/json" \
-            -X POST -d '{"username": "'"$DOCKER_USERNAME"'", "password": "'"$DOCKER_PASSWORD"'"}' \
-            https://hub.docker.com/v2/users/login/ | jq -r .token)
-
-          TAGS=$(curl -s -H "Authorization: JWT $TOKEN" \
-            "https://hub.docker.com/v2/repositories/$REPO_NAME/tags?page_size=100" | \
-            jq -r '.results | sort_by(.last_updated) | .[].name')
-
-          COUNT=0
-          for TAG in $TAGS; do
-            if [[ "$TAG" == "latest" ]]; then continue; fi
-            COUNT=$((COUNT+1))
-            if [ $COUNT -le $KEEP_COUNT ]; then continue; fi
-            echo "Deleting tag: $TAG"
-            curl -s -X DELETE \
-              -H "Authorization: JWT $TOKEN" \
-              "https://hub.docker.com/v2/repositories/$REPO_NAME/tags/$TAG/"
-          done
+                -X POST -d '{"username": "'"$DOCKER_USERNAME"'", "password": "'"$DOCKER_PASSWORD"'"}' \
+                https://hub.docker.com/v2/users/login/ | jq -r .token)
+              
+              TAGS=$(curl -s -H "Authorization: JWT $TOKEN" \
+                "https://hub.docker.com/v2/repositories/$REPO_NAME/tags?page_size=100" | \
+                jq -r '.results | sort_by(.last_updated) | reverse | .[].name')
+              
+              COUNT=0
+              for TAG in $TAGS; do
+                if [[ "$TAG" == "latest" ]]; then continue; fi
+                COUNT=$((COUNT+1))
+                if [ $COUNT -le $KEEP_COUNT ]; then
+                  echo "Keeping tag: $TAG"
+                  continue
+                fi
+                echo "Deleting tag: $TAG"
+                curl -s -X DELETE \
+                  -H "Authorization: JWT $TOKEN" \
+                  "https://hub.docker.com/v2/repositories/$REPO_NAME/tags/$TAG/"
+              done
