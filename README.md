@@ -1,6 +1,7 @@
 # Auto Updating Photon OS Roon Server Docker 
 
 ## I apologize for not being a true fork. I needed to make a clean repo so scheduling would work.
+This is based off of [davidsinko/docker-roonserver](https://github.com/davindisko/docker-roonserver).
 
 *Thank you to [David Ferreira](https://github.com/davindisko) for their wonderful container.*
 
