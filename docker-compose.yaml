@@ -1,12 +1,12 @@
 services:
   roonserver:
-    image: davindisko/roon-photon:latest
+    image: mackid1993/docker-roonserver:latest
     container_name: roonserver
     hostname: roonserver
     network_mode: host
     # privileged: true
     environment:
-      TZ: "Europe/Paris"
+      TZ: "America/New_York"
     volumes:
       - ./app:/app
       - ./data:/data
