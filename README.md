@@ -1,5 +1,8 @@
 # Auto Updating Photon OS Roon Server Docker 
 
+## For Unraid Users
+This is a drop-in replacement for the [current](https://forums.unraid.net/topic/129853-support-xthursdayx-roonserver/) template, simply point Unraid's docker manager to `mackid1993/docker-roonserver:latest`.
+
 ## I apologize for not being a true fork. I needed to make a clean repo so scheduling would work.
 This is based off of [davidsinko/docker-roonserver](https://github.com/davindisko/docker-roonserver).
 
@@ -13,8 +16,6 @@ This also would not be possible without the work of [Steef de Bruijn](https://gi
  
 The rest of this readme is from the original readme minus modifications to the `docker run` commmand.
 
-# For Unraid Users
-This is a drop-in replacement for the [current](https://forums.unraid.net/topic/129853-support-xthursdayx-roonserver/) template, simply point Unraid's docker manager to `mackid1993/docker-roonserver:latest`.
 
 # Docker for Roon using Photon OS
 
