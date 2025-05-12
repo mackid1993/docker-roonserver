@@ -5,7 +5,7 @@ This is a drop-in replacement for the [current](https://forums.unraid.net/topic/
 
 ## To Switch to Early Access
 Create a container variable called `ROON_SERVER_URL` set it to `https://download.roonlabs.net/builds/earlyaccess/RoonServer_linuxx64.tar.bz2`.
-Then with the container stopped delete /app and restart to download the EA build.
+Then with the container stopped delete /app and restart to download the EA build. To switch back to production: with the container stopped, remove that container variable, delete /app, and start the container.
 
 ## I apologize for not being a true fork. I needed to make a clean repo so scheduling would work.
 This is based off of [davidsinko/docker-roonserver](https://github.com/davindisko/docker-roonserver).
