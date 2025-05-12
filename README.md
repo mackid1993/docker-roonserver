@@ -14,7 +14,7 @@ This is based off of [davidsinko/docker-roonserver](https://github.com/davindisk
 
 **The primary difference with my container is an automated Github action that will rebuild it on the 1st of the Month at Midnight EST/1 AM EDT to ensure all dependencies are always up to date.**
 
-***If this breaks your Roon install, I take no resposibility, I forked this repo for my own personal use. Please make sure you take regular backups of your Roon database no matter what. If you come across this feel free to use it. I don't intend to touch this unless something breaks. Docker Hub will save the last 3 tags, so if something does break, revert to the last known working tag until it can be fixed. I use Roon every single day so if there is a major issue I would likely notice as I have skin in the game as a lifetime license holder. This is mostly meant to be set and forget with a monthly update.***
+***If this breaks your Roon install, I take no resposibility, I created this repo for my own personal use. Please make sure you take regular backups of your Roon database no matter what. If you come across this feel free to use it. I don't intend to touch this unless something breaks. Docker Hub will save the last 3 tags, so if something does break, revert to the last known working tag until it can be fixed. I use Roon every single day so if there is a major issue I would likely notice as I have skin in the game as a lifetime license holder. This is mostly meant to be set and forget with a monthly update.***
 
 This also would not be possible without the work of [Steef de Bruijn](https://github.com/steefdebruijn).
  
