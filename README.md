@@ -3,7 +3,7 @@
 Docker Hub: https://hub.docker.com/r/mackid1993/docker-roonserver/
 
 ## For Unraid Users
-This is a drop-in replacement for the [current](https://forums.unraid.net/topic/129853-support-xthursdayx-roonserver/) template, simply point Unraid's docker manager to `mackid1993/docker-roonserver:latest`. As of June 2025 this is also now available on Community Applications you may find the dedicated support thread [here](https://forums.unraid.net/topic/190570-support-roonserver-photon-os/).
+This is a drop-in replacement for the [current](https://forums.unraid.net/topic/129853-support-xthursdayx-roonserver/) template, simply point Unraid's docker manager to `mackid1993/docker-roonserver:latest`. As of June 2025 this is also now available on Community Applications, you may find the dedicated support thread [here](https://forums.unraid.net/topic/190570-support-roonserver-photon-os/).
 
 ## To Switch to Early Access
 Create a container variable called `ROON_SERVER_URL` set it to `https://download.roonlabs.net/builds/earlyaccess/RoonServer_linuxx64.tar.bz2`.
