@@ -1,4 +1,4 @@
-# Auto Updating Photon OS Roon Server Docker 
+# RoonServer Docker (Photon OS)
 
 Docker Hub: https://hub.docker.com/r/mackid1993/docker-roonserver/
 
