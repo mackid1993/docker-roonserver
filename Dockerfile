@@ -9,15 +9,14 @@ WORKDIR "/root"
 RUN tdnf update -y \
         && tdnf -y install sudo bzip2 cifs-utils alsa-utils wget icu xz
 
-RUN curl -O https://johnvansickle.com/ffmpeg/builds/${FFMPEG_PKG}
+RUN curl -L -o ${FFMPEG_PKG} https://github.com/BtbN/FFmpeg-Builds/releases/latest/download/${FFMPEG_PKG}
 
-RUN tar -xf ${FFMPEG_PKG} && rm ${FFMPEG_PKG} \
-        && mv ffmpeg-git-* /var/lib/ffmpeg
-
-WORKDIR "/var/lib/ffmpeg"
-
-RUN ln -s "${PWD}/ffmpeg" /usr/local/bin/ \
-        && ln -s "${PWD}/ffprobe" /usr/local/bin/
+RUN mkdir -p /var/lib/ffmpeg && \
+    tar -xf ${FFMPEG_PKG} && \
+    cp ffmpeg-*/bin/ffmpeg ffmpeg-*/bin/ffprobe /var/lib/ffmpeg/ && \
+    rm -rf ffmpeg-* ${FFMPEG_PKG} && \
+    ln -s /var/lib/ffmpeg/ffmpeg /usr/local/bin/ffmpeg && \
+    ln -s /var/lib/ffmpeg/ffprobe /usr/local/bin/ffprobe
 
 ENV ROON_SERVER_PKG=RoonServer_linuxx64.tar.bz2
 ENV ROON_SERVER_URL=https://download.roonlabs.net/builds/${ROON_SERVER_PKG}
