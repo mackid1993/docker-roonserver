@@ -52,7 +52,8 @@ docker run -d \
   mackid1993/docker-roonserver:latest
 ```
 ## Helpful Links
-steefdebruijn: https://github.com/steefdebruijn/docker-roonserver
-davindisko: https://github.com/davindisko/docker-roonserver
-Roon: https://roon.app
-Roon Community: https://community.roonlabs.com
+- steefdebruijn: https://github.com/steefdebruijn/docker-roonserver
+- davindisko: https://github.com/davindisko/docker-roonserver
+- Roon: https://roon.app
+- Roon Community: https://community.roonlabs.com
+- Unraid Support Thread: https://forums.unraid.net/topic/190570-support-roonserver-photon-os/
