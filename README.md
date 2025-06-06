@@ -51,7 +51,8 @@ docker run -d \
   -v ./backups:/backup \
   mackid1993/docker-roonserver:latest
 ```
-
-[steefdebruijn]: <https://github.com/steefdebruijn/docker-roonserver>
-[davindisko]: <https://github.com/davindisko/docker-roonserver>
-[roon]: <https://roonlabs.com>
+## Helpful Links
+steefdebruijn: https://github.com/steefdebruijn/docker-roonserver
+davindisko: https://github.com/davindisko/docker-roonserver
+Roon: https://roon.app
+Roon Community: https://community.roonlabs.com
