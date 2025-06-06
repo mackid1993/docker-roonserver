@@ -18,6 +18,11 @@ RUN mkdir -p /var/lib/ffmpeg && \
     ln -s /var/lib/ffmpeg/ffmpeg /usr/local/bin/ffmpeg && \
     ln -s /var/lib/ffmpeg/ffprobe /usr/local/bin/ffprobe
 
+RUN ffmpeg -version && \
+    for codec in libvorbis libmp3lame aac flac; do \
+        ffmpeg -hide_banner -encoders | grep -q "$codec" || (echo "Missing FFmpeg encoder: $codec" && exit 1); \
+    done
+
 ENV ROON_SERVER_PKG=RoonServer_linuxx64.tar.bz2
 ENV ROON_SERVER_URL=https://download.roonlabs.net/builds/${ROON_SERVER_PKG}
 ENV ROON_DATAROOT=/data
