@@ -26,13 +26,10 @@ This is based off of [davidsinko/docker-roonserver](https://github.com/davindisk
 *If this breaks your Roon install, I take no resposibility, I created this repo for my own personal use and decided to make it available to the community. Please make sure you take regular backups of your Roon database no matter what. I don't intend to touch this unless something breaks. Docker Hub will save the last 3 tags, so if something does break, revert to the last known working tag until it can be fixed. I use Roon every single day so if there is a major issue I would  notice as I am a Roon lifetime license holder. This is mostly meant to be set and forget with a monthly update. It's important to know that due to frequent updates this container may be more bleeding edge than other options, so take that into account when choosing to use it.*
 
 This  would not be possible without the work of [Steef de Bruijn](https://github.com/steefdebruijn) and [David Ferreira](https://github.com/davindisko) for their wonderful containers that this is derived from. David's discovery of Photon OS for this purpose is a major breakthrough for running RoonServer on Docker.
- 
-The rest of this readme is from the original readme minus modifications to the `docker run` commmand.
-
 
 ## Steps to Run
-- First clone the repo
-- Change TZ param in docker-compose.yaml
+- First clone the repo.
+- Change TZ paramater in docker-compose.yaml
 - Uncomment privileged if you encounter problems with network mounts.
 
 ## Run container with docker compose
