@@ -2,7 +2,7 @@ FROM photon:latest
 
 LABEL org.opencontainers.image.authors="mackid1993"
 
-ENV FFMPEG_PKG=ffmpeg-git-amd64-static.tar.xz
+ENV FFMPEG_PKG=ffmpeg-master-latest-linux64-gpl.tar.xz
 
 WORKDIR "/root"
 
