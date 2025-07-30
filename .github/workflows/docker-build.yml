@@ -40,12 +40,12 @@ jobs:
     needs: build-and-push
 
     steps:
-      - name: Delete old Docker Hub tags (keep latest 5)
+      - name: Delete old Docker Hub tags (keep latest 3)
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           REPO_NAME: mackid1993/docker-roonserver
-          KEEP_COUNT: 5
+          KEEP_COUNT: 3
         run: |
           TOKEN=$(curl -s -H "Content-Type: application/json" \
                 -X POST -d '{"username": "'"$DOCKER_USERNAME"'", "password": "'"$DOCKER_PASSWORD"'"}' \
